@@ -16,6 +16,7 @@ const Hero = () => {
             </div>
             <Avatar />
         </div>
+        
     )
 }
 

@@ -26,3 +26,26 @@ export type Social = Array<{
 
   link: string;
 }>;
+
+export type Work = {
+    position: string;
+    company: string;
+    companyLink?: string;
+    startDate: string;
+    endDate?: string;
+    description?: string;
+    bullets?: string[];
+    location?: string;
+    type?: "Full-time" | "Part-time" | "Contract" | "Internship" | "Freelance";
+};
+
+export type Education = {
+    degree: string;
+  institution: string;
+  institutionLink: string;
+  startDate: string;
+  endDate: string;
+  location: string;
+    grade: string;
+    achievements: string[];
+};
