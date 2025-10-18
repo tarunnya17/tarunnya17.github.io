@@ -2,11 +2,12 @@ import { education } from "@/resources/content";
 import { Education } from "@/types/contents.types";
 import Link from "next/link";
 import React from "react";
+import { BiMap } from "react-icons/bi";
 
 const EducationSection = () => {
   return (
     <div>
-      <h2 className="text-xl font-medium mb-6">Education</h2>
+      <h2 className="text-2xl font-medium mb-8">Education</h2>
       <div className="flex flex-col gap-12">
         {education.map((edu, index) => (
           <EducationCard key={index} education={edu} />
@@ -27,11 +28,11 @@ const EducationCard = ({ education }: EducationCardProps) => {
   return (
     <div className="w-full flex flex-col gap-2 border-l-1 border-gray-400 pl-4">
       <div>
-        <div className="text-sm flex gap-1 items-center text-gray-600">
-          {/* Add icon if needed */}
+        <div className="text-md flex gap-1 items-center text-secondary">
+          <BiMap />
           {education.location}
         </div>
-        <div className="flex justify-between">
+        <div className="flex text-xl font-medium justify-between">
           <Link
             href={education.institutionLink}
             target="_blank"
@@ -39,14 +40,14 @@ const EducationCard = ({ education }: EducationCardProps) => {
           >
             {education.institution}
           </Link>
-          <span className="text-sm text-gray-600">
+          <span className="text-base text-secondary">
             {education.startDate} -{" "}
             {education.endDate ? education.endDate : "Present"}
           </span>
         </div>
-        <div className="text-sm text-gray-600">{education.degree}</div>
+        <div className="text-lg text-secondary">{education.degree}</div>
       </div>
-      <div className="text-gray-600 text-sm">
+      <div className="text-secondary text-lg">
         <div className="">Grade: {education.grade}</div>
         {education.achievements && education.achievements.length > 0 && (
           <ul className="list-disc list-inside space-y-1">

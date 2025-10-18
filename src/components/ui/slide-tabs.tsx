@@ -28,16 +28,16 @@ const SlideTabs = ({ sections, activeSection, onSectionChange }: SlideTabsProps)
     width: 0,
     opacity: 0,
   });
-  
+
   const tabsRef = useRef<Map<string, HTMLLIElement>>(new Map());
 
   // Function to update cursor position based on active section
   const updateCursorForActiveSection = (sectionName: string) => {
     const activeTabElement = tabsRef.current.get(sectionName);
-    
+
     if (activeTabElement) {
       const { width } = activeTabElement.getBoundingClientRect();
-      
+
       setPosition({
         left: activeTabElement.offsetLeft,
         width,
@@ -70,8 +70,8 @@ const SlideTabs = ({ sections, activeSection, onSectionChange }: SlideTabsProps)
       className="relative flex w-fit"
     >
       {sections.map((section) => (
-        <Tab 
-          key={section.id} 
+        <Tab
+          key={section.id}
           section={section.label}
           isActive={activeSection?.id === section.id}
           setPosition={setPosition}
@@ -109,7 +109,7 @@ const Tab = ({ section, isActive, setPosition, onClick, registerTabRef }: TabPro
     if (ref.current) {
       registerTabRef(ref.current);
     }
-    
+
     return () => {
       registerTabRef(null);
     };
@@ -130,7 +130,7 @@ const Tab = ({ section, isActive, setPosition, onClick, registerTabRef }: TabPro
         });
       }}
       onClick={onClick}
-      className={`relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference ${isActive ? 'font-medium' : ''}`}
+      className={`relative  z-10 block cursor-pointer px-3 py-1.5 md:text-sm text-xs uppercase text-white mix-blend-difference ${isActive ? 'font-medium' : ''}`}
     >
       {section}
     </li>
@@ -151,7 +151,7 @@ const Cursor = ({ position }: CursorProps) => {
       animate={{
         ...position,
       }}
-      className="absolute z-0 h-7 rounded-full bg-black"
+      className="absolute z-0 h-full rounded-full bg-black"
     />
   );
 };

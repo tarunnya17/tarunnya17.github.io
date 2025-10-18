@@ -19,11 +19,21 @@ export type Avatar = {
     height?: number;
 };
 
+export type Technology = {
+    name: string;
+    icon: IconName;
+    url: string;
+};
+
+export type Link = {
+    label: string;
+    url: string;
+};
+
 export type Social = Array<{
   name: string;
 
   icon: IconName;
-
   link: string;
 }>;
 
@@ -48,4 +58,29 @@ export type Education = {
   location: string;
     grade: string;
     achievements: string[];
+};
+
+export type Publication = {
+    title: string;
+    nb?: string;
+    authors: string[];
+    journalOrConference: string;
+    date: string;
+    link?: string;
+    summary?: string;
+};
+
+export type Achievements = {
+    title: string; //Markdown
+    date: string;
+    content?: string; //Markdown
+    images?: Avatar[];
+};
+
+export type Projects = {
+    title: string;
+    description: string;
+    links?: Link[];
+    poster?: string;
+    technologies: Technology[];
 };

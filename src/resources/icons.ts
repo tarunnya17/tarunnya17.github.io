@@ -29,9 +29,12 @@ import {
     SiNextdotjs,
     SiFigma,
     SiSupabase,
+    SiResearchgate,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, FaResearchgate, } from "react-icons/fa6";
+import { LuFacebook } from "react-icons/lu";
+import { FiLinkedin } from "react-icons/fi";
 
 export const iconLibrary: Record<string, IconType> = {
     arrowUpRight: HiArrowUpRight,
@@ -49,7 +52,7 @@ export const iconLibrary: Record<string, IconType> = {
     eye: HiOutlineEye,
     eyeOff: HiOutlineEyeSlash,
     github: PiGithubLogoBold,
-    linkedin: PiLinkedinLogoBold,
+    linkedin: FiLinkedin,
     x: PiXLogoBold,
     twitter: PiXLogoBold,
     threads: PiThreadsLogoBold,
@@ -60,12 +63,13 @@ export const iconLibrary: Record<string, IconType> = {
     nextjs: SiNextdotjs,
     supabase: SiSupabase,
     figma: SiFigma,
-    facebook: FaFacebook,
+    facebook: LuFacebook,
     pinterest: FaPinterest,
     whatsapp: FaWhatsapp,
     reddit: FaReddit,
     telegram: FaTelegram,
     scholar: PiGraduationCapBold,
+    researchgate: SiResearchgate,
 };
 
 export type IconLibrary = typeof iconLibrary;

@@ -7,7 +7,7 @@ import Link from "next/link";
 const WorkSection = () => {
   return (
     <div>
-    <h2 className="text-xl font-medium mb-6">Experience</h2>
+    <h2 className="text-2xl font-medium mb-8">Experience</h2>
       <div className="flex flex-col gap-12">
         {workExperience.map((work, index) => (
           <WorkCard key={index} work={work} />
@@ -26,10 +26,10 @@ const WorkCard = ({ work }: WorkCardProps) => {
   return (
     <div className="w-full flex flex-col gap-6 border-l-1 border-gray-400 pl-4">
       <div>
-        <div className="text-sm flex gap-1 items-center text-gray-600">
+        <div className="text-md flex gap-1 items-center text-secondary">
           <BiMap /> {work.location}
         </div>
-        <div className="flex justify-between">
+        <div className="flex text-xl font-medium justify-between">
           <Link
             href={work.companyLink || "#"}
             target="_blank"
@@ -37,13 +37,13 @@ const WorkCard = ({ work }: WorkCardProps) => {
           >
             {work.company}
           </Link>
-          <span className="text-sm text-gray-600">
+          <span className="text-base text-secondary">
             {work.startDate} - {work.endDate ? work.endDate : "Present"}
           </span>
         </div>
-        <div className="text-sm text-gray-600">{work.position}</div>
+        <div className="text-lg text-secondary">{work.position}</div>
       </div>
-      <div className="text-gray-600 text-sm">
+      <div className="text-secondary text-lg">
         {work.description && <p className="mb-2">{work.description}</p>}
         {work.bullets && work.bullets.length > 0 && (
           <ul className="list-disc list-inside space-y-1">
