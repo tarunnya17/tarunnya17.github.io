@@ -23,7 +23,7 @@ const AchievementCard = ({ achievements, index }: FeatureCardProps) => {
         <div style={{
             boxShadow: 'rgba(0, 0, 0, 0.05) 0px 2.5px 12px 0px',
         }}
-            className={`w-full flex flex-col-reverse h-90 ` + (index && index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row') + ' items-center bg-white rounded-xl relative overflow-hidden'}>
+            className={`w-full flex flex-col-reverse sm:h-90 h-50 ` + (index && index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row') + ' items-center bg-white rounded-xl relative overflow-hidden'}>
             <div className='h-full w-full relative'>
                 {achievements.images && achievements.images.length > 0 && (
                     <div className="relative h-full">
@@ -85,9 +85,9 @@ const ShowcaseSection = () => {
     }, [emblaApi]);
     return (
         <div>
-            <div className="flex gap-4 h-90">
+            <div className="flex gap-4 sm:h-90 h-50">
 
-                <div className="basis-2/3 overflow-hidden h-full relative" >
+                <div className="sm:basis-2/3 overflow-hidden h-full relative" >
                     <div ref={emblaRef}>
                         <div className='flex h-full ' >
                             {achievements.map((achievement, index) => (
@@ -97,7 +97,7 @@ const ShowcaseSection = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="absolute right-4 bottom-4 flex items-center justify-between">
+                    <div className="absolute right-4 bottom-4 sm:flex items-center justify-between hidden">
 
                         <button className="bg-white rounded-full px-4 py-3 shadow-md flex gap-2 cursor-pointer hover:opacity-80" onClick={scrollToAchievements}>
                             <span className="material-icons">Acheivements</span>
@@ -105,7 +105,7 @@ const ShowcaseSection = () => {
                         </button>
                     </div>
                 </div>
-                <div className="basis-1/3 flex flex-col gap-6 h-full relative">
+                <div className="sm:basis-1/3 sm:flex flex-col gap-6 h-full relative hidden">
                     <div className='w-full  h-full' ref={embleRef2}>
                         <div className='flex h-full ' >
                             {projects.slice(0, 3).map((project, index) => (
