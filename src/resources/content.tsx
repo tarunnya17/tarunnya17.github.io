@@ -19,8 +19,7 @@ const person: Person = {
 //Hero section
 export const hero = {
     title: `Hey, I'm ${person.name}.`,
-    description: `I'm a Web Designer, Music Artist & Photographer.
-    I spend most of time thinking about Tea.`,
+    description: `I'm a ${person.role} specializing in Computer Science and Engineering. Welcome to my portfolio!`,
     avatar: person.avatar,
     cvLink: "/pdfs/Tarunnyamoye_CV.pdf",
     ///pdfs/Tarunnyamoye_CV.pdf
@@ -38,12 +37,12 @@ export const social: Social = [
     {
         name: "Facebook",
         icon: "facebook",
-        link: "https://www.facebook.com/tarunnyamoye.kundu/",
+        link: "https://www.facebook.com/tarunnyamoye.tarunnya",
     },
     {
         name: "GitHub",
         icon: "github",
-        link: "https://github.com/tarunnyamoye",
+        link: "https://github.com/tarunnya17",
     },
     // {
     //     name: "ResearchGate",
@@ -53,7 +52,7 @@ export const social: Social = [
     {
         name: "Google Scholar",
         icon: "scholar",
-        link: "https://scholar.google.com/citations?user=TarunnyamoyeKundu",
+        link: "https://scholar.google.com/citations?user=2t9uwFUAAAAJ",
     },
 ];
 
@@ -136,7 +135,7 @@ export const publications: Array<Publication> = [
         authors: ["Tarunnyamoye Kundu", "Rahat Morshed Nabil"],
         journalOrConference: "Artificial Intelligence Review",
         date: "2024",
-        link: "https://link.springer.com/article/10.1007/s10462-024-10456-8",
+        link: "",
         summary: "This survey paper explores the application of AI techniques in wildlife conservation, discussing current methodologies, challenges, and future research directions. It highlights the potential of AI to enhance conservation efforts through improved data analysis and decision-making. ",
     },
     {
@@ -144,7 +143,7 @@ export const publications: Array<Publication> = [
         authors: ["Rahat Morshed Nabil", "Tarunnyamoye Kundu"],
         journalOrConference: "International Conference on Signal Processing, Information, Communication and Systems 2024",
         date: "Nov 2024",
-        link: "https://ieeexplore.ieee.org/document/10012345", // Example link
+        link: "https://ieeexplore.ieee.org/document/10941020", // Example link
         summary: "This paper presents an enhanced YOLOv9-based framework for detecting endangered tigers in wildlife surveillance, improving accuracy and efficiency in conservation efforts.",
     },
     {
@@ -152,7 +151,7 @@ export const publications: Array<Publication> = [
         authors: ["Tarunnyamoye Kundu", "Rahat Morshed Nabil"],
         journalOrConference: "International Conference on Advances in Computing, Communication, Electrical, and Smart Systems",
         date: "Mar 2024",
-        link: "https://example.com",
+        link: "https://ieeexplore.ieee.org/document/10499474",
         summary: "This paper proposes a desktop companion bot leveraging computer vision to enhance healthcare services.",
     },
     {
@@ -160,7 +159,7 @@ export const publications: Array<Publication> = [
         authors: ["Rahat Morshed Nabil", "Uday Karmoker", "Tarunnyamoye Kundu"],
         journalOrConference: "7th International Conference on Civil Engineering for Sustainable Development (ICCESD 2024)",
         date: "Feb 2024",
-        link: "https://example.com",
+        link: "https://iccesd.kuet.ac.bd/2024/Papers/966.pdf",
         summary: "This paper presents a real-time traffic detection system for three-wheelers on expressways using the YOLO model.",
     },
     {
@@ -168,7 +167,7 @@ export const publications: Array<Publication> = [
         authors: ["Uday Karmoker", "Tarunnyamoye Kundu"],
         journalOrConference: "7th International Conference on Civil Engineering for Sustainable Development (ICCESD 2024)",
         date: "Feb 2024",
-        link: "https://example.com",
+        link: "https://www.researchgate.net/publication/378263737_ADVANCING_SUSTAINABILITY_INTRODUCING_REVERSE_VENDING_MACHINES_TO_UNIVERSITY_CAMPUSES",
         summary: "This paper discusses the implementation of reverse vending machines on university campuses to promote recycling and sustainability.",
     }
 ];

@@ -103,14 +103,14 @@ export default function Home() {
 
   return (
     <main className="font-sans">
-      <div className="mx-auto max-w-[1000px] pt-[125px] px-6 flex flex-col gap-6 justify-center">
+      <div className="mx-auto max-w-[1000px] sm:pt-[125px] pt-20 px-6 flex flex-col gap-6 justify-center">
         <section id={sections.intro.id} className=" scroll-mt-25 mb-16 ">
           <Hero />
         </section>
 
         <div
           ref={navBarRef}
-          className="sticky -translate-x-3 top-4 z-10 w-full bg-background p-2 rounded-full"
+          className="sticky -translate-x-3 top-4 z-10 w-full bg-background p-2 rounded-full hidden sm:block"
         >
           <SlideTabs
             sections={Object.values(sections)}

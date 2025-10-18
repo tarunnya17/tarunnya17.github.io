@@ -8,10 +8,10 @@ import { motion } from 'framer-motion' // <-- Add this import
 
 const Hero = () => {
     return (
-        <div className='flex gap-3 justify-between items-end'>
+        <div className='flex sm:flex-row flex-col-reverse gap-3 justify-between sm:items-end items-center'>
             <div>
-                <h1 className="text-2xl font-medium">{hero.title}</h1>
-                <p className="mt-4 whitespace-pre-line text-xl ">{hero.description}</p>
+                <h1 className="sm:text-2xl font-medium text-lg">{hero.title}</h1>
+                <p className="mt-4 whitespace-pre-line sm:text-xl ">{hero.description}</p>
                 <div className='mt-7 flex gap-6 items-center'>
                     <Social />
                     <button className=' text-primary hover:bg-primary/80 hover:text-white relative group cursor-pointer rounded-lg bg-black/5 px-3 py-1 transition-all duration-300' onClick={() => {
