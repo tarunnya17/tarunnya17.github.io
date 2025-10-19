@@ -211,8 +211,8 @@ export const achievements : Array<Achievements> = [
 //Projects
 export const projects: Array<Projects> = [
     {
-        title: "Enhancing Healthcare with Desktop Companion Bot",
-        description: `Baymin-1.0 is an interactive desktop companion bot designed to promote healthy screen habits and boost productivity. `,
+        title: "Desktop Companion Bot: Baymin-1.0",
+        description: ` Baymin-1.0 is an entertaining and interactive desktop companion bot that promotes healthy screen habits, provides a friendly reminder (implementing Pomodoro) by detecting presence, distance from the monitor using Computer Vision. `,
         technologies: [
             { name: "Python", icon: "python", url: "https://www.python.org/" },
             { name: "OpenCV", icon: "opencv", url: "https://opencv.org/" },
@@ -222,10 +222,10 @@ export const projects: Array<Projects> = [
             { label: "YouTube", url: "https://www.youtube.com/watch?v=zCMlpaTLjPc" },
             { label: "GitHub", url: "https://github.com/imrmnabil/Baymin_MicroProject" },
         ],
-        poster: "/images/projects/sample.png",
+        poster: "/images/projects/baymin.png",
     },
     {
-        title: "CSEKU_SDP_2023_Math_Plotter",
+        title: "Math Equation Plotter for Desktops",
         description: `Math_Plotter is a lightweight OpenGL-based equation plotter that renders mathematical functions in real time.`,
         technologies: [
             { name: "OpenGL", icon: "opengl", url: "https://www.opengl.org/" },
@@ -234,7 +234,7 @@ export const projects: Array<Projects> = [
             { label: "GitHub", url: "https://github.com/SDP1727/CSEKU_SDP_2023_Math_Plotter" },
             { label: "YouTube", url: "https://www.youtube.com/watch?v=8UaCjWoSqvo" },
         ],
-        poster: "/images/projects/sample.png",
+        poster: "/images/projects/mathploter.png",
     },
     {
         title: "DBMS Project on Bishwo Shahitto Kendro Mobile Library",
@@ -246,7 +246,7 @@ export const projects: Array<Projects> = [
         links: [
             { label: "GitHub", url: "https://github.com/imrmnabil/DBMS_Project" },
         ],
-        poster: "/images/projects/sample.png",
+        poster: "/images/projects/bsk.png",
     },
     {
         title: "Eventor - Web Project",
@@ -261,7 +261,7 @@ export const projects: Array<Projects> = [
         links: [
             { label: "GitHub", url: "https://github.com/tarunnya17/Eventor-Web-Project" },
         ],
-        poster: "/images/projects/sample.png",
+        poster: "/images/projects/eventor.png",
     },
 ]
 
