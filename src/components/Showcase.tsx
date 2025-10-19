@@ -36,7 +36,7 @@ const AchievementCard = ({ achievements, index }: FeatureCardProps) => {
 
                             />
                         </div>
-                        <div className="absolute flex w-full h-full bottom-0 left-0 bg-gradient-to-tr from-slate-900 via-transparent to-transparent text-white p-4">
+                        <div className="absolute flex w-full h-full bottom-0 left-0 bg-gradient-to-tr from-slate-600 via-transparent to-transparent text-white p-4">
                             <div className='w-1/2 h-fit self-end p-2'>
                                 <Markdown components={MarkdownComponents} >{achievements.title}</Markdown>
                             </div>

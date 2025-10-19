@@ -24,7 +24,7 @@ const person: Person = {
 //Hero section
 export const hero = {
     title: `Hey, I'm ${person.name}.`,
-    description: `I'm a ${person.role} specializing in Computer Science and Engineering. Welcome to my portfolio!`,
+    description: `​I'm a Lecturer in CSE and AI/ML researcher with experience in smart systems and computer vision. My vision is to continually grow my expertise by pursuing advanced opportunities in higher study and research.`,
     avatar: person.avatar,
     cvLink: "/pdfs/Tarunnyamoye_CV.pdf",
     ///pdfs/Tarunnyamoye_CV.pdf
