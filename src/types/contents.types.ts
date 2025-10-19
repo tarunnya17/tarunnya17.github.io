@@ -9,6 +9,10 @@ export type Person = {
     avatar: Avatar;
     email: string;
     phone: string;
+    whatsapp?: {
+        link: string;
+        number: string;
+    };
     location: string;
 };
 

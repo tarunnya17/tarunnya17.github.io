@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import RealTime from './ui/real-time'
-import { BiCopy, BiPhoneCall } from 'react-icons/bi'
+import { BiCopy, BiLogoWhatsapp, BiPhoneCall } from 'react-icons/bi'
 import { contact } from '@/resources/content'
 import { IconBase } from 'react-icons'
 import Icon from './Icon'
@@ -38,6 +38,13 @@ const ContactSection = () => {
                         <a href={`tel:${contact.phone}`} className='cursor-pointer'>
                             <BiPhoneCall className='inline-block mr-2 text-primary' size={16} />
                             <span>{contact.phone}</span>
+                        </a>
+                    </div>
+                    <div className='flex flex-col gap-2 items-start'>
+                        <h3 className='text-lg font-medium'>WhatsApp:</h3>
+                        <a href={contact.whatsapp?.link} className='cursor-pointer'>
+                            <BiLogoWhatsapp className='inline-block mr-2 text-primary' size={16} />
+                            <span>{contact.whatsapp?.number}</span>
                         </a>
                     </div>
                     <div className='flex flex-col gap-2 items-start'>
