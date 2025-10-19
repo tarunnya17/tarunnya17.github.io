@@ -38,9 +38,8 @@ const Hero = () => {
                     </button>
                 </div>
             </div>
-            <div className='flex flex-col items-center gap-4 relative'>
+            <div className='flex flex-col flex-shrink-0 items-center gap-4 relative w-fit'>
                 <Avatar />
-
             </div>
         </div>
 
