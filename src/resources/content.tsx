@@ -1,4 +1,5 @@
 import type { Achievements, Education, Person, Projects, Publication, Social, Work } from "@/types/contents.types";
+import { link } from "fs";
 
 const person: Person = {
     firstname: "Tarunnyamoye",
@@ -12,7 +13,11 @@ const person: Person = {
         height: 200,
     },
     email: "tarunnyamoye1917@gmail.com",
-    phone: "+88000000000",
+    phone: "+8801751297196",
+    whatsapp: {
+        link: "https://wa.me/1751297196",
+        number: "+8801751297196",
+    },
     location: "Dhaka, Bangladesh",
 };
 
@@ -220,41 +225,42 @@ export const projects: Array<Projects> = [
         ],
         links: [
             { label: "YouTube", url: "https://www.youtube.com/watch?v=zCMlpaTLjPc" },
-            { label: "GitHub", url: "https://github.com/imrmnabil/Baymin_MicroProject" },
+            { label: "GitHub", url: "https://github.com/tarunnya17/Desktop-Companion-Bot" },
         ],
         poster: "/images/projects/baymin.png",
     },
     {
         title: "Math Equation Plotter for Desktops",
-        description: `Math_Plotter is a lightweight OpenGL-based equation plotter that renders mathematical functions in real time.`,
+        description: ` This plotter is a lightweight OpenGL-based tool that plots mathematical functions in real time, supporting linear, trigonometric, logarithmic, and exponential equations with interactive zoom, pan, and adjustable parameters.`,
         technologies: [
             { name: "OpenGL", icon: "opengl", url: "https://www.opengl.org/" },
-            { name: "C++", icon: "cpp", url: "https://isocpp.org/" },],
+            { name: "C++", icon: "cpp", url: "https://isocpp.org/" },
+        { name: "Qt Framework", icon: "qt", url: "https://www.qt.io/" },],
         links: [
-            { label: "GitHub", url: "https://github.com/SDP1727/CSEKU_SDP_2023_Math_Plotter" },
+            { label: "GitHub", url: " https://github.com/tarunnya17/Math_Plotter" },
             { label: "YouTube", url: "https://www.youtube.com/watch?v=8UaCjWoSqvo" },
         ],
         poster: "/images/projects/mathploter.png",
     },
     {
         title: "DBMS Project on Bishwo Shahitto Kendro Mobile Library",
-        description: `This project is a basic command-line application developed for an academic project. It serves as a Library Management System tailored for the Bishwo Shahitto Kendro Mobile Library.`,
+        description: "A Java-based Library Management System for the Bishwo Shahitto Kendro Mobile Library, enabling book management, member registration, borrowing and returning, and report generation digitally and efficiently.",
         technologies: [
             { name: "Java", icon: "java", url: "https://www.java.com/" },
             { name: "MySQL", icon: "mysql", url: "https://www.mysql.com/" },
         ],
         links: [
-            { label: "GitHub", url: "https://github.com/imrmnabil/DBMS_Project" },
+            { label: "GitHub", url: "https://github.com/tarunnya17/DBMS_Project" },
         ],
         poster: "/images/projects/bsk.png",
     },
     {
-        title: "Eventor - Web Project",
+        title: "Eventor.com - An Event Management Website",
         description: `Eventor is a web project developed as part of the Web Programming Project course. It integrates modern web technologies and the SSLCOMMERZ Payment Gateway to provide a seamless event management experience.`,
         technologies: [
             { name: "JavaScript", icon: "javascript", url: "https://www.javascript.com/" },
             { name: "HTML", icon: "html", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-            { name: "CSS", icon: "css", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+            { name: "Firebase", icon: "firebase", url: "https://firebase.google.com/" },
             { name: "EJS", icon: "ejs", url: "https://ejs.co/" },
             { name: "TailwindCSS", icon: "tailwindcss", url: "https://tailwindcss.com/" },
         ],
@@ -271,4 +277,5 @@ export const contact = {
     phone: person.phone,
     timezone: "Asia/Dhaka",
     social: social,
+    whatsapp: person.whatsapp,
 };
