@@ -6,6 +6,7 @@ import Markdown from 'react-markdown'
 import { MarkdownComponents } from '@/resources/markdown-components'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import TestScores from './TestScores'
 
 interface FeatureCardProps {
     achievements: Achievements
@@ -62,6 +63,9 @@ const FeatureSection = () => {
                 {achievements.map((achievement, index) => (
                     <FeatureCard index={index} key={index} achievements={achievement} />
                 ))}
+            </div>
+            <div className="mt-8">
+                <TestScores />
             </div>
         </div>
     )
