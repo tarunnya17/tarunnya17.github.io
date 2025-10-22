@@ -104,7 +104,7 @@ export default function Home() {
   return (
     <main className="font-sans">
       <div className="mx-auto max-w-[1000px] sm:pt-[125px] pt-20 px-6 flex flex-col gap-6 justify-center">
-        <section id={sections.intro.id} className=" scroll-mt-25 mb-16 ">
+        <section id={sections.intro.id} className=" scroll-mt-25 sm:mb-16 mb-2 ">
           <Hero />
         </section>
 
@@ -119,26 +119,26 @@ export default function Home() {
           />
         </div>
 
-        <section className="scroll-mt-25 mb-16 ">
+        <section className="scroll-mt-25 sm:mb-16 mb-2 ">
           <ShowcaseSection />
         </section>
 
-        <section id={sections.work.id} className="scroll-mt-25 mb-16 ">
+        <section id={sections.work.id} className="scroll-mt-25 sm:mb-16 mb-2 ">
           <WorkSection />
         </section>
-        <section id={sections.education.id} className="scroll-mt-25 mb-16 ">
+        <section id={sections.education.id} className="scroll-mt-25 sm:mb-16 mb-2 ">
           <EducationSection />
         </section>
-        <section id={sections.publications.id} className="scroll-mt-25 mb-16 ">
+        <section id={sections.publications.id} className="scroll-mt-25 sm:mb-16 mb-2 ">
           <PublicationSection />
         </section>
-        <section id={sections.projects.id} className="scroll-mt-25 mb-16">
+        <section id={sections.projects.id} className="scroll-mt-25 sm:mb-16 mb-2">
           <ProjectsSection />
         </section>
-        <section id={sections.achievements.id} className="scroll-mt-25 mb-16 ">
+        <section id={sections.achievements.id} className="scroll-mt-25 sm:mb-16 mb-2 ">
           <FeatureSection />
         </section>
-        <section id={sections.contact.id} className="scroll-mt-25 mb-16 ">
+        <section id={sections.contact.id} className="scroll-mt-25 sm:mb-16 mb-2 ">
           <ContactSection />
         </section>
 

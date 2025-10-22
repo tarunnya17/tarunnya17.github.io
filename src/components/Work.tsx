@@ -9,7 +9,7 @@ const WorkSection = () => {
   return (
     <div>
       <h2 className="text-2xl font-medium mb-8">Experience</h2>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-6 sm:gap-12">
         {workExperience.map((work, index) => (
           <WorkCard key={index} work={work} />
         ))}
@@ -25,7 +25,7 @@ interface WorkCardProps {
 }
 const WorkCard = ({ work }: WorkCardProps) => {
   return (
-    <div className="w-full flex flex-col sm:gap-6 border-l-1 border-gray-400 pl-4">
+    <div className="w-full flex flex-col gap-2 sm:gap-6 border-l-1 border-gray-400 pl-4">
       <div>
         <div className="sm:text-md text-xs flex gap-1 items-center text-secondary">
           <BiMap /> {work.location}

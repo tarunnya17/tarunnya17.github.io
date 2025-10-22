@@ -23,9 +23,9 @@ const FeatureCard = ({ achievements, index }: FeatureCardProps) => {
             boxShadow: 'rgba(0, 0, 0, 0.05) 0px 2.5px 12px 0px',
         }}
          className={`w-full flex flex-col-reverse h-100 ` + (index && index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row') + ' items-center bg-white rounded-xl relative overflow-hidden'}>
-            <div className="md:basis-[40%] p-10">
+            <div className="sm:basis-[40%] p-5 sm:p-10">
                 <Markdown components={MarkdownComponents}>{achievements.title}</Markdown>
-                <div className="mt-2 line-clamp-2 md:line-clamp-none">
+                <div className="mt-2">
                     <Markdown components={MarkdownComponents}>{achievements.content}</Markdown>
                 </div>
             </div>

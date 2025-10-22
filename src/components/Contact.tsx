@@ -18,15 +18,15 @@ const ContactSection = () => {
     return (
         <div>
             <h2 className="text-2xl font-medium mb-8 ">Let's Talk</h2>
-            <div className='flex gap-4 pl-4 border-secondary border-l justify-between'>
-                <div className='flex flex-col gap-6'>
+            <div className='flex gap-4   justify-between sm:flex-row flex-col-reverse'>
+                <div className='flex flex-col sm:gap-6 gap-3 border-secondary border-l pl-4'>
                     <div className='flex gap-2 items-center'>
-                        <h3 className='text-lg font-medium'>Time for me:</h3>
-                        <p className='text-secondary'><RealTime timezone={contact.timezone} timeFormat="hh:mm A" /></p>
+                        <h3 className='sm:text-lg text-sm font-medium'>Time for me:</h3>
+                        <p className='text-secondary text-sm sm:text-base'><RealTime timezone={contact.timezone} timeFormat="hh:mm A" /></p>
                     </div>
                     <div className='flex flex-col gap-2 items-start'>
-                        <h3 className='text-lg font-medium'>Email:</h3>
-                        <button onClick={handleCopy} className='cursor-pointer'>
+                        <h3 className='sm:text-lg text-sm font-medium'>Email:</h3>
+                        <button onClick={handleCopy} className='cursor-pointer text-sm sm:text-base'>
                             <BiCopy className='inline-block mr-2 text-primary' size={16} />
                             <span>
                                 {copied ? "Copied!" : contact.email}
@@ -34,22 +34,22 @@ const ContactSection = () => {
                         </button>
                     </div>
                     <div className='flex flex-col gap-2 items-start'>
-                        <h3 className='text-lg font-medium'>Phone:</h3>
-                        <a href={`tel:${contact.phone}`} className='cursor-pointer'>
+                        <h3 className='sm:text-lg text-sm font-medium'>Phone:</h3>
+                        <a href={`tel:${contact.phone}`} className='cursor-pointer text-sm sm:text-base'>
                             <BiPhoneCall className='inline-block mr-2 text-primary' size={16} />
                             <span>{contact.phone}</span>
                         </a>
                     </div>
                     <div className='flex flex-col gap-2 items-start'>
-                        <h3 className='text-lg font-medium'>WhatsApp:</h3>
-                        <a href={contact.whatsapp?.link} className='cursor-pointer'>
+                        <h3 className='sm:text-lg text-sm font-medium'>WhatsApp:</h3>
+                        <a href={contact.whatsapp?.link} className='cursor-pointer text-sm sm:text-base'>
                             <BiLogoWhatsapp className='inline-block mr-2 text-primary' size={16} />
                             <span>{contact.whatsapp?.number}</span>
                         </a>
                     </div>
                     <div className='flex flex-col gap-2 items-start'>
-                        <h3 className='text-lg font-medium'>Social Links:</h3>
-                        <div>
+                        <h3 className='sm:text-lg text-sm font-medium'>Social Links:</h3>
+                        <div className='text-sm sm:text-base'>
                             {contact.social.map((social, index) => (
                                 <a
                                     key={index}
@@ -59,7 +59,7 @@ const ContactSection = () => {
                                     rel="noopener noreferrer"
                                 >
                                    <Icon name={social.icon as keyof typeof IconBase} size={16} />
-                                   <span className='text-lg'>{social.name}</span>
+                                   <span className='sm:text-lg text-sm'>{social.name}</span>
                                 </a>
                             ))}
                         </div>

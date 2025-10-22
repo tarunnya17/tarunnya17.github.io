@@ -9,7 +9,7 @@ const EducationSection = () => {
   return (
     <div>
       <h2 className="text-2xl font-medium mb-8">Education</h2>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-6 sm:gap-12">
         {education.map((edu, index) => (
           <EducationCard key={index} education={edu} />
         ))}
