@@ -97,9 +97,9 @@ const ShowcaseSection = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="absolute right-4 bottom-4 sm:flex items-center justify-between hidden">
+                    <div className="absolute right-4 bottom-4 flex items-center justify-between">
 
-                        <button className="bg-white rounded-full px-4 py-3 shadow-md flex gap-2 cursor-pointer hover:opacity-80" onClick={scrollToAchievements}>
+                        <button className="bg-white rounded-full sm:px-4 px-3 sm:py-3 py-2 shadow-md flex gap-2 cursor-pointer hover:opacity-80 sm:text-base text-sm" onClick={scrollToAchievements}>
                             <span className="material-icons">Acheivements</span>
                             <AnimatedDownArrow />
                         </button>

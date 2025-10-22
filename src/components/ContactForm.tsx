@@ -59,8 +59,7 @@ const ContactForm = () => {
                         id="message"
                         name="message"
                         placeholder="Your Message" 
-                        className='w-full border border-secondary p-2 rounded-lg bg-black/5' 
-                        rows={8}
+                        className='w-full border border-secondary p-2 rounded-lg bg-black/5 sm:h-72 h-20' 
                     />
                     <ValidationError 
                         prefix="Message" 
