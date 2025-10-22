@@ -2,6 +2,7 @@ import { Projects } from "@/types/contents.types";
 import { projects } from "@/resources/content";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import ViewLink from "./ui/view-link";
+import ExportedImage from "next-image-export-optimizer";
 
 const ProjectCard = ({ project }: { project: Projects }) => {
   return (
@@ -9,13 +10,16 @@ const ProjectCard = ({ project }: { project: Projects }) => {
       style={{
         boxShadow: "rgba(0, 0, 0, 0.05) 0px 2.5px 12px 0px",
       }}
-      className="bg-white rounded-xl overflow-hidden flex flex-col"
+      className="bg-white rounded-xl overflow-hidden flex flex-col relative"
     >
-      <img
-        src={project.poster}
-        alt={project.title}
-        className="w-full aspect-video object-cover "
-      />
+      {project.poster && (
+        <ExportedImage
+          src={project.poster}
+          alt={project.title}
+          className="w-full aspect-video object-cover "
+          fill
+        />
+      )}
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="sm:text-xl text-lg font-medium mb-2">{project.title}</h3>
         <div>

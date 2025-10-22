@@ -7,6 +7,7 @@ import { MarkdownComponents } from '@/resources/markdown-components'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import TestScores from './TestScores'
+import ExportedImage from 'next-image-export-optimizer'
 
 interface FeatureCardProps {
     achievements: Achievements
@@ -37,12 +38,12 @@ const FeatureCard = ({ achievements, index }: FeatureCardProps) => {
                         <div className="overflow-hidden h-full" ref={emblaRef}>
                             <div className="flex h-full">
                                 {achievements.images.map((image, index) => (
-                                    <div key={index} className="flex-[0_0_100%] min-w-0 relative h-full">
-                                        <img
+                                    <div key={index} className="flex-[0_0_100%] min-w-0 relative h-full overflow-hidden">
+                                        <ExportedImage
                                             src={image.src}
                                             alt={image.alt || `Achievement Image ${index + 1}`}
                                             className="object-cover w-full h-full"
-                                            
+                                            fill
                                         />
                                     </div>
                                 ))}

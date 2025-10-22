@@ -1,10 +1,11 @@
 import { hero } from '@/resources/content'
 import React from 'react'
-import Image from 'next/image'
+
+import ExportedImage from 'next-image-export-optimizer'
 
 const Avatar = () => {
     return (
-        <Image
+        <ExportedImage
             src={hero.avatar.src}
             alt={hero.avatar.alt}
             width={hero.avatar.width || 100}
