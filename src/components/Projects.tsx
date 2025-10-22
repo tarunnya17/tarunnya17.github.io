@@ -12,7 +12,8 @@ const ProjectCard = ({ project }: { project: Projects }) => {
       }}
       className="bg-white rounded-xl overflow-hidden flex flex-col relative"
     >
-      {project.poster && (
+      <div className="relative overflow-hidden w-full h-60">
+        {project.poster && (
         <ExportedImage
           src={project.poster}
           alt={project.title}
@@ -20,6 +21,7 @@ const ProjectCard = ({ project }: { project: Projects }) => {
           fill
         />
       )}
+      </div>
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="sm:text-xl text-lg font-medium mb-2">{project.title}</h3>
         <div>
