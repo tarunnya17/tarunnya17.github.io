@@ -8,6 +8,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Fade from 'embla-carousel-fade'
 import AnimatedDownArrow from './ui/animated-down'
+import ExportedImage from 'next-image-export-optimizer'
 
 interface FeatureCardProps {
     achievements: Achievements
@@ -28,11 +29,12 @@ const AchievementCard = ({ achievements, index }: FeatureCardProps) => {
                 {achievements.images && achievements.images.length > 0 && (
                     <div className="relative h-full">
 
-                        <div className="flex-[0_0_100%] min-w-0 relative h-full">
-                            <img
+                        <div className="flex-[0_0_100%] min-w-0 relative h-full overflow-hidden">
+                            <ExportedImage
                                 src={achievements.images[0].src}
                                 alt={achievements.images[0].alt || `Achievement Image `}
                                 className="object-cover object-top w-full h-full"
+                                fill
 
                             />
                         </div>
@@ -53,11 +55,13 @@ const ProjectCard = ({ project }: { project: Projects }) => {
             boxShadow: 'rgba(0, 0, 0, 0.05) 0px 2.5px 12px 0px',
         }}
             className="bg-white rounded-xl overflow-hidden flex flex-col h-full relative">
-            <img
+            {project.poster && (
+                <ExportedImage
                 src={project.poster}
                 alt={project.title}
                 className="w-full h-full object-cover "
-            />
+                fill
+            /> )}
             
         </div>
     )
