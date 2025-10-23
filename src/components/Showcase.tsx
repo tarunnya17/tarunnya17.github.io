@@ -91,10 +91,10 @@ const ShowcaseSection = () => {
         <div>
             <div className="flex gap-4 sm:h-90 h-50">
 
-                <div className="sm:basis-2/3 overflow-hidden h-full relative" >
+                <div className="sm:basis-2/3 overflow-hidden h-full w-full relative" >
                     <div ref={emblaRef}>
                         <div className='flex h-full ' >
-                            {achievements.map((achievement, index) => (
+                            {achievements.slice(0, 2).map((achievement, index) => (
                                 <div key={index} className="flex-[0_0_100%] min-w-0 relative h-full">
                                     <AchievementCard index={index} key={index} achievements={achievement} />
                                 </div>
@@ -109,7 +109,7 @@ const ShowcaseSection = () => {
                         </button>
                     </div>
                 </div>
-                <div className="sm:basis-1/3 sm:flex flex-col gap-6 h-full relative hidden">
+                <div className="sm:basis-1/3 sm:flex flex-col gap-6 h-full w-full relative hidden">
                     <div className='w-full  h-full' ref={embleRef2}>
                         <div className='flex h-full ' >
                             {projects.slice(0, 3).map((project, index) => (

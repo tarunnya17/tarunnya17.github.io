@@ -7,7 +7,7 @@ const TestScores = () => {
   return (
     <div>
         <h2 className="text-2xl font-semibold mb-4">Test Scores</h2>
-        <div className='bg-white shadow-lg rounded-xl p-6 flex flex-col sm:flex-row gap-6'>
+        <div className='bg-white shadow-lg rounded-xl p-6 flex sm:flex-row gap-6'>
             <div className='flex-1'>
                 <div className="flex gap-2 relative">
                     
