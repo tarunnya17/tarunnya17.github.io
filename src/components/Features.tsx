@@ -24,21 +24,21 @@ const FeatureCard = ({ achievements, index }: FeatureCardProps) => {
         <div style={{
             boxShadow: 'rgba(0, 0, 0, 0.05) 0px 2.5px 12px 0px',
         }}
-         className={`w-full flex flex-col-reverse h-100 ` + (index && index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row') + ' items-center bg-white rounded-xl relative overflow-hidden'}>
+         className={`w-full flex flex-col-reverse sm:h-100 ` + (index && index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row') + ' items-center bg-white rounded-xl relative overflow-hidden'}>
             <div className="sm:basis-[40%] p-5 sm:p-10">
                 <Markdown components={MarkdownComponents}>{achievements.title}</Markdown>
                 <div className="mt-2">
                     <Markdown components={MarkdownComponents}>{achievements.content}</Markdown>
                 </div>
             </div>
-            <div className="md:basis-[60%] h-full">
+            <div className="md:basis-[60%] h-full w-full">
                 {achievements.images && achievements.images.length > 0 && (
-                    <div className="relative h-full">
+                    <div className="relative h-full w-full">
                         {/* Embla Carousel */}
-                        <div className="overflow-hidden h-full" ref={emblaRef}>
-                            <div className="flex h-full">
+                        <div className="overflow-hidden h-full w-full" ref={emblaRef}>
+                            <div className="flex h-full w-full">
                                 {achievements.images.map((image, index) => (
-                                    <div key={index} className="flex-[0_0_100%] min-w-0 relative h-full overflow-hidden">
+                                    <div key={index} className="flex-[0_0_100%] min-w-0 relative h-50 sm:h-100 w-full overflow-hidden">
                                         <ExportedImage
                                             src={image.src}
                                             alt={image.alt || `Achievement Image ${index + 1}`}
